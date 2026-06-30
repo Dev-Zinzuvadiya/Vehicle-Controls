@@ -12,14 +12,12 @@ A lightweight ScriptHookVDotNet plugin that improves vehicle realism in GTA V St
 - 🔔 Immersive brake condition notifications
 - ⚙️ Easy configuration through `Vehicle Controls.ini`
 
----
 
 ## Requirements
 - Grand Theft Auto V
 - ScriptHookV (latest - Alexander Blade)
 - ScriptHookVDotNet (latest)
 
----
 
 ## Installation
 1. Install ScriptHookV.
@@ -30,7 +28,6 @@ A lightweight ScriptHookVDotNet plugin that improves vehicle realism in GTA V St
 Grand Theft Auto V/scripts/
 ```
 
----
 
 ## Brake Temperature System
 Brake performance changes depending on temperature.
@@ -45,28 +42,23 @@ Brake performance changes depending on temperature.
 | Brake Failure Risk | Very limited braking |
 | Failed | Almost no braking force |
 
----
 
 ## Automatic Indicators
 Indicators automatically activate while steering at low speeds and cancel once the steering wheel returns near the center.
 
----
 
 ## Notes
 - Works only when the player is driving.
 - Compatible with Story Mode.
 
----
 
 ## Known Limitations
 - Brake temperatures reset after changing vehicles.
 - Does not modify NPC vehicles.
 
----
 
 ## Changelog
 ### v1.0
-
 - Initial release
 - Manual engine control
 - Smart exit system
@@ -75,14 +67,11 @@ Indicators automatically activate while steering at low speeds and cancel once t
 - Brake condition notifications
 - INI configuration support
 
----
 
 ## License
 This project is released for personal use and modification.
 Please do not re-upload or redistribute modified versions without giving proper credit.
 
----
 
 ## Author
-**DEV'Z**
-If you enjoy this project, consider leaving a rating and feedback on GTA5-Mods.
+**DEV'Z**: If you enjoy this project, consider leaving a rating and feedback on [GTA5-Mods](https://www.gta5-mods.com/).
