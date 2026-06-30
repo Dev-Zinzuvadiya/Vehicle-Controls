@@ -11,6 +11,16 @@ using System.Windows.Forms;
 
 public class Vehicle_Controls : Script
 {
+    // <----- REQUIRED FIELDS FOR INI -----> //
+    private ScriptSettings _config;
+    private Keys _engineToggle = Keys.Space;
+    private bool _AutoIndicators = true;
+    private bool _brakeTemperature = true;
+    private bool _brakeNotifications = true;
+
+
+
+
     public Vehicle_Controls()
     {
         Tick += OnTick;
@@ -18,6 +28,8 @@ public class Vehicle_Controls : Script
         KeyDown += OnKeyDown;
         Aborted += OnAbort;
         Interval = 25;
+
+        INI_CONFIG();
     }
 
 
@@ -50,5 +62,24 @@ public class Vehicle_Controls : Script
     // =======================================================
     private void OnAbort(object sender, EventArgs e)
     {
+    }
+
+
+
+    //  =>>  CHANGEABLE SCRIPT FEATURES FROM .INI  <<= //
+    // =======================================================
+    private void INI_CONFIG()
+    {
+        _config = ScriptSettings.Load("scripts/Vehicle Controls.ini");
+
+        // --- KEYS --- //
+        _engineToggle = _config.GetValue("Keys", "EngineToggle", Keys.Space);
+
+        // --- FEATURES --- //
+        _AutoIndicators = _config.GetValue("Features", "AutoIndicators", true);
+        _brakeTemperature = _config.GetValue("Features", "BrakeTemperature", true);
+        _brakeNotifications = _config.GetValue("Features", "BrakeNotifications", true);
+
+        _config.Save();
     }
 }
